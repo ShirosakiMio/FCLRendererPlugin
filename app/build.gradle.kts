@@ -29,7 +29,7 @@ android {
 
             //渲染器在启动器内显示的名称
             //The name displayed by the renderer in the launcher
-            manifestPlaceholders["des"] = "GL4ES"
+            manifestPlaceholders["des"] = "Holy-GL4ES(Legacy/旧版)"
             //渲染器的具体定义 格式为 名称:渲染器库名:EGL库名 例如 LTW:libltw.so:libltw.so
             //The specific definition format of a renderer is ${name}:${renderer library name}:${EGL library name}, for example:   LTW:libltw.so:libltw.so
             manifestPlaceholders["renderer"] = "GL4ES:libgl4es.so:libEGL.so"
