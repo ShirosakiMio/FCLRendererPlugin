@@ -22,20 +22,20 @@ android {
         configureEach {
             //应用名
             //app name
-            resValue("string","app_name","XXX Renderer")
+            resValue("string","app_name","ANGLE Renderer")
             //包名后缀
             //package name Suffix
-            applicationIdSuffix = ".xxx"
+            applicationIdSuffix = ".angle"
 
             //渲染器在启动器内显示的名称
             //The name displayed by the renderer in the launcher
-            manifestPlaceholders["des"] = ""
+            manifestPlaceholders["des"] = "ANGLE(1.17+)"
             //渲染器的具体定义 格式为 名称:渲染器库名:EGL库名 例如 LTW:libltw.so:libltw.so
             //The specific definition format of a renderer is ${name}:${renderer library name}:${EGL library name}, for example:   LTW:libltw.so:libltw.so
-            manifestPlaceholders["renderer"] = ""
+            manifestPlaceholders["renderer"] = "ANGLE:libtinywrapper.so:/libEGL_angle.so"
 
             manifestPlaceholders["boatEnv"] = mutableMapOf<String,String>().apply {
-
+                put("LIBGL_ES","3")
             }.run {
                 var env = ""
                 forEach { (key, value) ->
@@ -45,7 +45,8 @@ android {
             }
 
             manifestPlaceholders["pojavEnv"] = mutableMapOf<String,String>().apply {
-
+                put("LIBGL_ES", "3")
+                put("POJAV_RENDERER", "opengles3_desktopgl_angle_vulkan")
             }.run {
                 var env = ""
                 forEach { (key, value) ->
