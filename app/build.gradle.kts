@@ -47,6 +47,7 @@ android {
             manifestPlaceholders["pojavEnv"] = mutableMapOf<String,String>().apply {
                 put("LIBGL_ES", "3")
                 put("POJAV_RENDERER", "opengles3_desktopgl_angle_vulkan")
+                put("DLOPEN", "libGLESv2_angle.so")
             }.run {
                 var env = ""
                 forEach { (key, value) ->
