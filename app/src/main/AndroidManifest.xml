@@ -32,6 +32,12 @@
         <meta-data
             android:name="pojavEnv"
             android:value="${pojavEnv}" />
+        <meta-data
+            android:name="minMCVer"
+            android:value="${minMCVer}" />
+        <meta-data
+            android:name="maxMCVer"
+            android:value="${maxMCVer}" />
 
     </application>
 
