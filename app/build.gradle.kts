@@ -59,6 +59,13 @@ android {
                 }
                 env.dropLast(1)
             }
+
+            //最小支持的MC版本
+            //The minimum supported MC version
+            manifestPlaceholders["minMCVer"] = ""
+            //最大支持的MC版本
+            //The maximum supported MC version
+            manifestPlaceholders["maxcMCVer"] = ""
         }
     }
     compileOptions {
