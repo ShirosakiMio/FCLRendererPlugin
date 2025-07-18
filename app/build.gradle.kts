@@ -65,7 +65,7 @@ android {
             manifestPlaceholders["minMCVer"] = ""
             //最大支持的MC版本
             //The maximum supported MC version
-            manifestPlaceholders["maxcMCVer"] = ""
+            manifestPlaceholders["maxMCVer"] = ""
         }
     }
     compileOptions {
